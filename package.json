@@ -1,0 +1,21 @@
+{
+  "name": "1tuid",
+  "description": "share the best news",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "supervisor ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.6.7",
+    "cookie-parser": "~1.3.2",
+    "debug": "^1.0.4",
+    "ejs": "^2.3.1",
+    "express": "^4.8.8",
+    "jade": "^1.5.0",
+    "morgan": "^1.2.3",
+    "mysql": "file:C:\\Users\\HUANGG~1\\AppData\\Local\\Temp\\npm-5708-7ce893e2\\git-cache-5f132f4551e2\\de5913227dbbaacbbdf22ee38689d090e1451be9",
+    "q": "^1.4.1",
+    "serve-favicon": "^2.0.1"
+  }
+}

@@ -1,0 +1,76 @@
+<% include header.ejs %>
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+ <body >
+ 	<div class="contain">
+		<header>  
+		   <a class="pre" href="<%= setting.pre %>">pre</a>
+		</header>  
+
+		<div class="content">
+			<% if( data.book) {%>
+			<ul class="content-list">
+				<li >
+					<a href="<%= data.book.url %>" class="title"> <%= data.book.title %></a> 
+					(<%=data.book.comment%>)
+					<span class="cate">书籍</span>
+				</li>
+				<li >
+					<a href="<%= data.music.url %>" class="title"> <%= data.music.title %></a> (<%=data.music.comment%>)<span class="cate">歌曲</span>
+				</li>
+				<li >
+					<a href="<%= data.zhihu.url %>" class="title"> <%= data.zhihu.title %></a> <span class="cate">知乎</span>
+				</li>
+				<li >
+					<a href="<%= data.people.url %>" class="title"> <%= data.people.title %></a> 
+					(<%=data.people.comment%>)
+					<span class="cate">人物</span>	
+				</li>
+				<li >
+					<a href="<%= data.os.url %>" class="title"> <%= data.os.title %></a> 
+					(<%=data.os.comment%>)
+					<span class="cate">开源</span>	
+				</li>
+				<li >
+					<a href="<%= data.news.url %>" class="title"> <%= data.news.title %></a> 
+					<!-- (<%=data.news.comment%>) -->
+					<span class="cate">新闻</span>	
+				</li>
+				<li >
+					<a href="<%= data.website.url %>" class="title"> <%= data.website.title %></a> 
+					(<%=data.website.comment%>) 
+					<span class="cate">网站</span>	
+				</li>
+				<li >
+					<a href="<%= data.movie.url %>" class="title"> <%= data.movie.title %></a> 
+					(<%=data.movie.comment%>) 
+					<span class="cate">电影</span>	
+				</li>
+			</ul>
+				<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="d00cf87c128200160bf8519e686e90d9" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"1tui"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+			<%}else {%>
+			<div class="not-day">
+				今天还没有发表，你可以先看昨天的
+			</div>
+			<%}%>
+		</div>
+	</div>
+
+
+<a class="pre" href="<%= setting.next %>">next</a>
+</body>
+</html>

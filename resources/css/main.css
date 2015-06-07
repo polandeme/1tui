@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+body {
+	width: 100%;
+	min-height: 700px;
+	background-image: url(../images/bg.jpg);
+}
+.contain {
+	width: 1024px;
+	min-height: 400px;
+	padding: 20px;
+	background: #EBE8D7;
+	margin: 0 auto;
+}
+
+.content {
+	width: 100%;
+	margin-top: 100px;
+}
+.content li {
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.title {
+	font-size: 23px;
+}
+.cate {
+	font-size: 12px;
+	background: #666;
+	padding: 2px;
+	color: #ff0d0d;
+	border-radius: 3px;
+}
+
+
+.playurl {
+	display: none;
+}
