@@ -57,7 +57,6 @@ exports.getTuiByNow = function(req, res) {
 	    	data.news = results[5][0];
 	    	data.website = results[6][0];
 	    	data.movie = results[7][0];
-	    	console.log(results.length);
 
 	    	var preDate = new Date();
 	    	preDate.setDate(preDate.getDate() - 1);
@@ -66,7 +65,20 @@ exports.getTuiByNow = function(req, res) {
 	    	var nextDate = new Date();
 	    	nextDate.setDate(nextDate.getDate() + 1);
 	    	nextDate = (new Date(nextDate)).getTime();
-
+	    	console.log('---------------------');
+	    	console.log(data);
+	    	    var datas = {
+			    	book: {
+			    		title: 'booketi',
+			    		url: 'url'
+			    	},
+			    	music: {
+			    		title: 'music',
+			    		url: 'musicurl'
+			    	}
+			    };
+	    	console.log('---------------------');
+	    	console.log(datas);
 			res.render('index', {
 				data: data, 
 				length: results.length, 
