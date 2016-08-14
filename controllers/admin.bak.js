@@ -29,28 +29,26 @@ exports.addTui = function(req, res) {
 		Month = myDate.getMonth(),
 		Day = myDate.getDay();
 	var curDate = Year.toString() + Month.toString() + Day.toString();
-	var type = req.body.type;
-	console.log(req.body);
+	console.log(curDate);
 	var data = {
-		uuid: 'dddd',
+		sid: 'dddd',
 		title: req.body.title,
 		url: req.body.url,
 		comment: req.body.comment,
-		type: type,
-		type_name: 'null'
+		daid: 'curDate'
 	};
-
-	console.log(data);
+	console.dir(req.body);
+	if(req.body.cate == 'music') {
+		data.play_url = req.body.playurl;
+	};
+	var table = 't_' + req.body.cate;
 	var connect = db.connect();
-
-	connect.query("INSERT INTO t_all set ? ", [data], function(err, rows) {
+	console.log(table);
+	connect.query("INSERT INTO ?? set ? ", [table, data], function(err, rows) {
 		if(err) {
 			console.log("Error Is " + err);
-			res.send('insert error');
-		} else {
-			res.send(rows);
 		}
 	})
-	// res.end('yes');
+	res.end('yes');
 }
 

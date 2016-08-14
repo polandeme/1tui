@@ -5,8 +5,6 @@
 		   <div class="pre-btn"><a class="pre" href="<%= setting.pre %>">pre</a></div>
 		</header>
  	<div class="contain">
-  
-
 		<div class="content">
 		<div class="test">
 				
@@ -15,7 +13,7 @@
 				<% for (key in data){
 						if(data[key]) {	%>
 				<li >
-					<a href="<%= data.book.url %>" class="title"> <%= data[key].title %></a> 
+					<a href="<%= data.book %>" class="title"> <%= data[key].title %></a> 
 					(<%= data[key].comment%>)
 					<span class="cate">书籍</span>
 				</li>
