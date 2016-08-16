@@ -6,41 +6,43 @@
 		</header>
  	<div class="contain">
 		<div class="content">
-		<div class="test">
-				
-		</div>
 			<ul class="content-list">
 				<% for (key in data){
 						if(data[key]) {	%>
 				<li >
-					<a href="<%= data.book %>" class="title"> <%= data[key].title %></a> 
-					(<%= data[key].comment%>)
-					<span class="cate">书籍</span>
+					<a href="<%= data.url %>" class="title"> <%= data[key].title %></a> 
+					<!-- (<%= data[key].comment%>) -->
+					<span class="cate"><%= data[key].type_name %></span>
 				</li>
 				
 				<% }} %>
 			</ul>
-				<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="<%= setting.pre %>" data-title="推" data-url="1tui.top"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"1tui"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
+			<!-- 多说评论框 start -->
+			<div class="ds-thread" 
+				 data-thread-key="<%= setting.pre %>" 
+				 data-title="推" 
+				 data-url="1tui.top">
+			</div>
+			<!-- 多说评论框 end -->
+
 
 		</div>
 	</div>
 
+	<div class="next-btn"><a class="pre" href="<%= setting.next %>">next</a></div>
 
-<div class="next-btn"><a class="pre" href="<%= setting.next %>">next</a></div>
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+		var duoshuoQuery = {short_name:"1tui"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.unstable.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] 
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+	</script>
+	<!-- 多说公共JS代码 end -->
 </body>
 </html>

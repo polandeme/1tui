@@ -1,4 +1,5 @@
 var db = require('../models/db');
+var typeConfig = require('../config/type');
 
 exports.cate = function(req, res) {
 	res.render('admin/addcate');
@@ -24,20 +25,21 @@ exports.tui = function(req, res) {
 	res.render('admin/tui');
 }
 exports.addTui = function(req, res) {
+	console.log(typeConfig);
 	var myDate = new Date();
 	var Year = myDate.getYear(),
 		Month = myDate.getMonth(),
 		Day = myDate.getDay();
 	var curDate = Year.toString() + Month.toString() + Day.toString();
 	var type = req.body.type;
-	console.log(req.body);
+	console.log(typeConfig[type]);
 	var data = {
 		uuid: 'dddd',
 		title: req.body.title,
 		url: req.body.url,
 		comment: req.body.comment,
 		type: type,
-		type_name: 'null'
+		type_name: typeConfig[type]
 	};
 
 	console.log(data);

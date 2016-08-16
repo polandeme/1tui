@@ -26,7 +26,7 @@ body {
 
 .content {
 	width: 100%;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 .content li {
 	margin-top: 10px;
@@ -54,4 +54,10 @@ body {
 	border: 1px solid red;
 	padding: 0;
 	text-align: center;
-} 
+	box-sizing: border-box;
+	display: none;
+}
+/* 多说css 重置 */
+.ds-thread {
+	margin-top: 50px;
+}

@@ -14,4 +14,8 @@ module.exports = function(app) {
 	// app.get('/admin/tui', controllers.admin.tui);
 	app.get('/:date', controllers.home.getTuiByDate);
 	app.post('/admin/addTui', controllers.admin.addTui);
+
+
+	//api
+	app.get('/api/now', controllers.home.getTuiByNowAPI);
 }
